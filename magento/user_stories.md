@@ -96,3 +96,9 @@
 **When**: The user selects a payment method and clicks on a "Delete" option.
 
 **Then**: The selected payment method is removed from their account.
+
+
+
+## Admin
+
+### 2.1 
