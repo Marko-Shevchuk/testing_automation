@@ -14,7 +14,7 @@
 - On the "My Orders" subpage users can view the table of orders they have made with these columns: Order id | Date | Ship To | Order Total | Status | Action
 - On the "My Downloadable Products" subpage users can view a table of digital products they have bought with these columns: Order id | Date | Title | Download | Status | Remaining downloads
 - On the "My Wish List" subpage users can view a list of products they have liked earlier and order them
-- On the "Adress Book" subpage user can add addresses and choose the default billing address and default shipping address.
+- On the "Address Book" subpage user can add addresses and choose the default billing address and default shipping address.
 - On the "Account Information" subpage user can change their first name, last name, email, and password
 - On the "Stored Payment Methods" subpage user can add payment methods or delete them
 - On the "My Product Reviews" subpage users can view reviews they have made for products they have bought
@@ -30,7 +30,7 @@
 **Given**: The user is on the profile page.
 
 **When**: The user clicks on each of the following links in the account navigation menu: "My Account", 
-"My Orders", "My Downloadable Products", "My Wish List", "Address Book", "Account Information" "Stored Payment Methods", "My Product Reviews"
+"My Orders", "My Downloadable Products", "My Wish List", "Address Book", "Account Information", "Stored Payment Methods", "My Product Reviews"
 
 **Then**: The user is directed to the corresponding subpage for each link.
 
@@ -50,7 +50,7 @@
 
 **When**: The user clicks the "Change Password" button.
 
-**Then**: Input fields "Current Password", "New Password", and "Confirm Password" dynamically appears on the page
+**Then**: Input fields "Current Password", "New Password", and "Confirm Password" dynamically appear on the page
 
 **When**: The user enters the correct current password.
 
@@ -65,9 +65,9 @@
 
 **When**: The user clicks on the "Download" for a downloadable product.
 
-**Given**: The remaining downloads count is greater than zero.
+**Given**: The remaining download count is greater than zero.
 
-**Then**: Downloading begins and the remaining downloads count is updated.
+**Then**: Downloading begins and the remaining download count is updated.
 
 ### Scenario 1.3f - Order product from Wish list:
 **Given**: The user is on the "My Wish List" subpage.
@@ -86,7 +86,7 @@
 ### Scenario 1.3h - Add payment method:
 **Given**: The user is on the "Stored Payment Methods" subpage.
 
-**When**: The user clicks on the "Add Payment Method" button and provides the necessary payment information(card number, expiration date, cvv).
+**When**: The user clicks on the "Add Payment Method" button and provides the necessary payment information(card number, expiration date, CVV).
 
 **And**: Provided payment information is valid.
 
@@ -106,14 +106,14 @@
 
 **When**: The user clicks on the "Download" for a downloadable product.
 
-**Given**: The remaining downloads count equal to zero.
+**Given**: The remaining download count is equal to zero.
 
-**Then**: A message with text "download limit has been exceeded" pops up
+**Then**: A message with the text "download limit has been exceeded" pops up
 
 ### Scenario 1.3k - Invalid input:
-**When**: The user types invalid name, phone number, card number, email or etc. on any field at profile page.
+**When**: The user types an invalid name, phone number, card number, email, etc. on any field on the profile page.
 
-**Then**: Corresponding field is marked with message "invalid input"
+**Then**: Each corresponding field is marked with the message "invalid input"
 
 
 
