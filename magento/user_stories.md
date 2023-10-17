@@ -5,10 +5,10 @@
 ### 1.1 As a user, I want to be able to create an account so that I can have a personalized shopping experience.
 **Description**: All pages should contain a button that links to a registration page where users can create an account using their first name, last name, email address and password. The "password" field should have a password strength indicator and must only allow passwords that are at least 8 characters long, and contain at least: one uppercase letter, one lowercase letter, one number and one special character. The registration form should contain a "confirm password" field.  
 ### Scenario 1.1a Successful register
-**Given**: No account has been previously registered using the specified email    
+**Given**: No account has been previously registered using the specified email  
 **When**: The user enters their first name, last name, email address and password into the registration form  
 **And**: The user clicks on a "Create account" button  
-**Then**: The account is created and the user is logged into the system with that account.
+**Then**: The account is created and the user is logged into the system with that account.  
 ### Scenario 1.1b Email taken
 **Given**: An account has already been registered using the specified email    
 **When**: The user enters their first name, last name, email address and password into the registration form  
