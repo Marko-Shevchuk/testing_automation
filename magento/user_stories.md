@@ -2,7 +2,56 @@
 
 ## User
 
-### 1.1 
+### 1.1 As a user, I want to be able to create an account so that I can have a personalized shopping experience.
+**Description**: All pages should contain a button that links to a registration page where users can create an account using their first name, last name, email address and password. The "password" field should have a password strength indicator and must only allow passwords that are at least 8 characters long, and contain at least: one uppercase letter, one lowercase letter, one number and one special character. The registration form should contain a "confirm password" field.  
+### Scenario 1.1a Successful register
+**Given**: No account has been previously registered using the specified email  
+**When**: The user enters their first name, last name, email address and password into the registration form  
+**And**: The user clicks on a "Create account" button  
+**Then**: The account is created and the user is logged into the system with that account.  
+### Scenario 1.1b Email taken
+**Given**: An account has already been registered using the specified email    
+**When**: The user enters their first name, last name, email address and password into the registration form  
+**And**: The user clicks on a "Create account" button  
+**Then**: An error message regarding the existing account is displayed.  
+### Scenario 1.1c Invalid input
+**Given**: No account has been previously registered using the specified email    
+**When**: The user specifies either:
+* a blank first name, 
+* a blank last name, 
+* a non-RFC 5322-compliant email address, 
+* a password that does NOT contain one uppercase letter, one lowercase letter, one number, one special character and three different types of letters,
+* a "confirm password" that does not match the "password"    
+  
+**Then**: Dynamic error messages regarding each discrepancy are displayed next to the appropriate input field.
+
+
+### 1.2 As a user, I want to be able to log into my account so that I can continue using my personal data and experience personalization.
+
+**Description**: When a user is not logged in, all pages should contain a button that links to a login page. The login page should have the "email" and "password" required fields and "sign in" and "Forgot your password?" buttons. The "Forgot Your Password?" page should have "email" required fields and a "Reset my password" button. The "New Password" page should have "password" and "confirm password" required fields with strength indicator as described in user story 1.1 and the "change password" button.
+
+### Scenario 1.2a Logging In
+**Given**: The user has a registered account and is on the login page  
+**When**: The user enters their email and password  
+**And**: The user clicks the "Sign In" button  
+**Then**: The user is successfully logged into their account and can access their personalized data.
+
+### Scenario 1.2b Incorrect Email or Password
+**Given**: The user is on the login page  
+**When**:  The user enters an incorrect email or password    
+**And**: The user clicks the "Sign In" button    
+**Then**: An error message is displayed indicating that the email or password is incorrect. The user is not logged in.
+
+### Scenario 1.2c Reset Password
+**Given**: The user has forgotten their password    
+**When**: The user clicks the "Forgot Your Password?" button on the login page    
+**Then**: The user is redirected to the "Forgot Your Password?" page  
+**When**: The user enters their email    
+**And**: The user clicks the "Reset my password" button    
+**Then**: An email with a reset password link is sent to the user's email address  
+**When**: The user goes to the "New password" page using the reset password link  
+**And**: The user fills "password" and "confirm password" fields with the same new password  
+**Then**: The user's password is changed and the user is redirected to the login page
 
 ### 1.3 As a user, I want to be able to view my account profile so that I can access my contact information, my default billing address, my default shipping address, my orders, my downloadable products, my wish list, my address book, my stored payment methods, and my reviews.
 
@@ -50,7 +99,7 @@
 **Given**: The user is on the "My Downloadable Products" subpage.  
 **When**: The user clicks on the "Download" for a downloadable product.  
 **Given**: The remaining download count is greater than zero.  
-**Then**: Downloading begins and the remaining download count is updated.
+**Then**: Downloading begins and the remaining download count is updated
 
 ### Scenario 1.3f - Order product from Wish list:
 **Given**: The user is on the "My Wish List" subpage.  
@@ -127,4 +176,5 @@
 ## Admin
 
 
-### 2.1
+### 2.1 
+
